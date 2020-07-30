@@ -1,6 +1,6 @@
 #!/usr/bin/env ansible-playbook
 ---
-- hosts: localhost # change this if you want to add more hosts.
+- hosts: all # change this if you want to add more hosts.
   #remote_user: root
   become_method: sudo
   
