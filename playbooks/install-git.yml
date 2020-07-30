@@ -6,7 +6,7 @@
   
   tasks:
   - name: Install Git
-    package: name=git state=installed
+    package: name=git state=present
     become: yes
 
   - name: install the 'Development tools' package group
