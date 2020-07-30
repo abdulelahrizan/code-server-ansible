@@ -1,6 +1,6 @@
 #!/usr/bin/env ansible-playbook
 ---
-- hosts: localhost # change this if you want to add more hosts.
+- hosts: all # change this if you want to add more hosts.
   #remote_user: root
   become_method: sudo
   vars:
@@ -9,7 +9,7 @@
 
   tasks:
   - name: Install Git
-    package: name=git state=installed
+    package: name=git state=present
     become: yes
 
   - name: install the 'Development tools' package group
@@ -23,12 +23,12 @@
     become: yes
 
   - name: Install net-tools
-    package: name=net-tools state=installed
+    package: name=net-tools state=present
     become: yes
     become_method: sudo
 
   - name: Install OpenSSL
-    package: name=openssl state=installed
+    package: name=openssl state=present
     become: yes
     become_method: sudo
 
