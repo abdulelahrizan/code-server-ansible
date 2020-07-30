@@ -33,7 +33,7 @@
     become_method: sudo
 
   - name: Acquire code-server
-    command: chdir=/tmp wget -O - https://github.com/codercom/code-server/releases/download/{{ coder_version }}/code-server{{ coder_version }}-linux-x86_64.tar.gz | tar -xvz
+    command: chdir=/tmp wget -O - https://github.com/cdr/code-server/releases/download/3.4.1/code-server-3.4.1-linux-x86_64.tar.gz | tar -xvz
     become: yes
     become_method: sudo
 
